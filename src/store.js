@@ -1,13 +1,6 @@
+import RootReducer from "../src/Redux/reducer/reducerindex"
 import { createStore } from "redux";
 
-import React from 'react'
+const store = createStore(RootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-const store = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
-
-export default store
+export default store;
