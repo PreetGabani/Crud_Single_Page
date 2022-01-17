@@ -121,7 +121,7 @@ const Home = () => {
 
     const handleInsertSubmit = (e) => {
         e.preventDefault()
-        if (!insert.inTitle && !insert.inBody && !insert.inCheck) {
+        if (!insert.inTitle || !insert.inBody) {
             toast.error("Enter all field in CREATE Task", {
                 theme: 'colored',
                 autoClose: 2000,
@@ -147,7 +147,7 @@ const Home = () => {
     const handleUpdateSubmit = (e) => {
         e.preventDefault()
 
-        if (!update.upTitle && !update.upBody && !update.upCheck && !update.upId) {
+        if (!update.upTitle || !update.upBody || !update.upId) {
             toast.error("Enter all field in UPDATE Task", {
                 theme: 'colored',
                 autoClose: 2000,
